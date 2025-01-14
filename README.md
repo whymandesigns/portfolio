@@ -1,6 +1,7 @@
 # portfolio
 Design Portfolio Website
-![Screenshot 2025-01-14 at 22 34 20](https://github.com/user-attachments/assets/2c1f79ce-0333-402c-a4dc-008ef6c055ab)
+![Screenshot 2025-01-14 at 22 46 30](https://github.com/user-attachments/assets/281b1b03-8118-415c-803a-df71767e1d2f)
+
 
 #### I'm a Product Designer with 12YoE. My passions lies at the intersection of design and technology, where I bridge the gap between user needs and functional, impactful products
 ---
