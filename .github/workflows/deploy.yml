@@ -20,5 +20,5 @@ jobs:
           server-dir: /var/www/html/  # Replace with your hosting directoryv
           overwrite: true
           create-only: true
-          debug: true
           passive: true
+          dangerous-clean-slate: true
