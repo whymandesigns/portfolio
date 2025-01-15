@@ -18,5 +18,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /Users/matthew/Documents/ii_Personal/Others/matthewvella.net/portfolio/  # Adjust if your site is in a subfolder
+          local-dir: ./  # Adjust if your site is in a subfolder
           server-dir: /var/www/html  # Replace with your hosting directory
