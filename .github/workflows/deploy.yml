@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Adjust if your site is in a subfolder
-          server-dir: /var/www/html  # Replace with your hosting directory
+          server-dir: /var/www/html/  # Replace with your hosting directory
