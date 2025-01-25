@@ -142,7 +142,7 @@ a {
 	}
 }
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 0.8em;
 	font-size: 16px;
 }
 
@@ -411,6 +411,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+#fh5co-project{
+	padding: 2em 0;
+	@media screen and (max-width: $screen-sm) {
+		padding: 2em 0;
+	}
+}
 
 #fh5co-services, 
 #fh5co-explore, 
