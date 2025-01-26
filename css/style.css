@@ -66,11 +66,15 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   border: none !important;
 }
 
-.contact{
+.menulink{
     float: right;
     margin-top: 35px;
-    font-size: 16px;
+    font-size: 20px;
     color: #ffa500 !important;
+}
+
+.menulink:hover{
+  text-decoration: underline;
 }
 
 #fh5co-header {
