@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   color: rgba(255, 165, 0, 0.8) !important;
   text-decoration: none;
 }
-#fh5co-home a:hover {
+#fh5co-homea:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -291,11 +291,11 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   z-index: 2;
   background: rgba(0, 0, 0, 0.3);
 }
-#fh5co-home, #fh5co-home .text-wrap {
+#fh5co-home .text-wrap {
   height: 900px;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-home, #fh5co-home .text-wrap {
+  #fh5co-home .text-wrap {
     height: 500px;
   }
 }
@@ -339,6 +339,17 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   text-align: left;
   font-size: 20px;
   line-height: 30px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 10px 0;
+}
+
+/*About page heading customization */
+
+.text-inner .about {
+  text-align: center !important;
+  font-size: 48px !important;
+  line-height: 1.5 !important;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 0 10px 0;
@@ -1286,3 +1297,100 @@ article.clients span {
   color: #adacac;
 }
 
+
+
+/* Link Custom Style */
+.fancylink {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  height: 30px;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  float: right;
+  padding-top: 40px;
+}
+
+/* Hide extra text */
+.mask {
+  position: relative;
+  padding: 0;
+  height: 20px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.link-container {
+  transition: transform 0.5s ease;
+}
+
+.title {
+  display: block;
+
+  /*  Set same font-size and line height  */
+  font-size: 20px;
+  line-height: 20px;
+
+  transition: transform 0.5s ease;
+}
+
+.link-title1 {
+  transform-origin: right center;
+}
+
+.link-title2 {
+  transform-origin: left center;
+  transform: rotate(30deg);
+}
+
+.link-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: #f8f8ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  transition: transform 0.4s ease;
+}
+
+.icon:nth-child(2) {
+  transform: translate(-40px);
+}
+
+/* Hover Action*/
+
+/* Move up two texts (20px = font-size) */
+.fancylink:hover .link-container {
+  transform: translateY(-20px);
+}
+
+/* Rotate texts a little bit */
+.fancylink:hover .fancylink-title1 {
+  transform: rotate(30deg);
+}
+
+.fancylink:hover .link-title2 {
+  transform: rotate(0);
+}
+
+/* Move arrows to right */
+.fancylink:hover .icon:first-child {
+  transform: translate(40px);
+}
+
+.fancylink:hover .icon:nth-child(2) {
+  transform: translate(0px);
+}
