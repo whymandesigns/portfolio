@@ -1405,3 +1405,42 @@ article.clients span {
   height: auto; /* Maintains aspect ratio */
   display: block;
 }
+
+.testimonials{
+  line-height: 48px;
+  font-size: 32px;
+  font-style: italic;
+}
+
+.cardTestimonial{
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 48px;
+  margin-bottom: 48px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between avatar and text */
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover; /* Ensures proper scaling */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.title {
+  color: gray;
+}
