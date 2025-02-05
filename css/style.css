@@ -278,8 +278,8 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   color: rgba(255, 165, 0, 0.8) !important;
   text-decoration: none;
 }
-#fh5co-homea:hover {
-  color: #fff;
+#fh5co-home a:hover {
+  color: rgba(255, 165, 0, 0.8) !important;
   text-decoration: none;
 }
 #fh5co-home .gradient {
@@ -1305,7 +1305,6 @@ article.clients span {
   font-family: 'Playfair Display', serif;
   height: 30px;
   align-items: center;
-  color: #000;
   text-decoration: none;
   display: flex;
   float: right;
@@ -1328,6 +1327,7 @@ article.clients span {
 
 .title {
   display: block;
+  color: #ffa500cc !important;
 
   /*  Set same font-size and line height  */
   font-size: 20px;
@@ -1349,7 +1349,7 @@ article.clients span {
   position: relative;
   width: 35px;
   height: 35px;
-  background: #f8f8ff;
+  background: #212121;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1441,6 +1441,6 @@ article.clients span {
   font-weight: bold;
 }
 
-.title {
+.role {
   color: gray;
 }
