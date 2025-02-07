@@ -21,4 +21,4 @@ jobs:
           overwrite: true
           create-only: true
           passive: true
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
