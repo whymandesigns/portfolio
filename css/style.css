@@ -285,10 +285,10 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
 }
 
 @media screen and (max-width: 768px) {
-  #fh5co-home .text-inner h1 {
+  #fh5co-home .text-wrap .text-inner h1 {
     font-size: 40px;
   }
-  #fh5co-home .text-inner h2 {
+  #fh5co-home .text-wrap .text-inner h2 {
     text-align: left;
     font-size: 20px;
     line-height: 32px;
