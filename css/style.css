@@ -413,7 +413,7 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   #fh5co-process-leancanvas,
   #fh5co-process-motion,
   #fh5co-process-usertest,
-  #fh5co-process-designsystem,{
+  #fh5co-process-designsystem{
     padding: 3em 0;
   }
 }
@@ -497,7 +497,6 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   background: #c88304;
 }
     
-}
 .fh5co-project .project-grid .desc p a:hover, .fh5co-project .project-grid .desc p a:focus {
   text-decoration: none;
 }
@@ -1028,6 +1027,7 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   /* ideally, transition speed should match zoom duration */
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
