@@ -1481,14 +1481,14 @@ article.clients span {
 }
 
 .logo-section img{
-  max-width: 100px;
-  margin: 15px;
+  max-width: 90px;
+  margin: 10px;
 }
 
 .availability-badge {
   display: flex;
   align-items: center;
-  top: 25px;
+  top: 30px;
   font-size: 16px;
   font-weight: bold;
   color: white;
