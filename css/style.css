@@ -1515,3 +1515,46 @@ article.clients span {
       opacity: 0.5;
   }
 }
+
+
+
+.highlight {
+  display: inline-block;
+  background: linear-gradient(
+      100deg,
+      #ffffaf00 1%,
+      #33332a 2.5%,
+      #2a2a2180 5.7%,
+      #ffffaf1a 93%,
+      #4f4f3eb4 95%,
+      #32322600 98%
+    ),
+    linear-gradient(182deg, #ffffaf00, #38382c4d 8%, #27271f00 15%);
+}
+
+.carousel-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  width: calc(450px * 8); /* Adjust the width based on the number of images */
+  animation: slide 25s linear infinite;
+}
+
+.carousel-slide {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 450px; /* Adjust the width as needed */
+  height: 360px;
+  margin-right: 4px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-60%); }
+}
