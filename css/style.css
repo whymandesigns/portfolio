@@ -77,7 +77,12 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   text-decoration: underline;
 }
 
-/* NEEDS CODE CLEAN. THIS IS NOT USED ANYMORE
+/* 
+
+//////////////////////////////////
+NEEDS CODE CLEAN. THIS IS NOT USED ANYMORE
+//////////////////////////////////
+
 #fh5co-header {
   position: absolute;
   z-index: 999999;
@@ -388,6 +393,7 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
 #fh5co-footer,
 #fh5co-team,
 #fh5co-work,
+#fh5co-team,
 #fh5co-project,
 #fh5co-counters,
 #fh5co-pricing,
@@ -1331,12 +1337,10 @@ article.clients span {
 .fancylink {
   font-size: 20px;
   font-family: 'Playfair Display', serif;
-  height: 30px;
-  align-items: center;
   text-decoration: none;
   display: flex;
-  float: right;
-  padding-top: 40px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* Hide extra text */
@@ -1500,4 +1504,14 @@ article.clients span {
   background-color: #28a745; /* Green color */
   border-radius: 50%;
   margin-right: 8px;
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
 }
