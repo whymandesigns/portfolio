@@ -1501,7 +1501,7 @@ article.clients span {
 .availability-badge .dot {
   width: 10px;
   height: 10px;
-  background-color: #28a745; /* Green color */
+  background-color: #22e24f; /* Green color */
   border-radius: 50%;
   margin-right: 8px;
   animation: flash 2s infinite;
@@ -1511,8 +1511,8 @@ article.clients span {
   0%, 100% {
       opacity: 1;
   }
-  50% {
-      opacity: 0.5;
+  40% {
+      opacity: 0.4;
   }
 }
 
@@ -1541,7 +1541,7 @@ article.clients span {
 .carousel-container {
   display: flex;
   width: calc(450px * 8); /* Adjust the width based on the number of images */
-  animation: slide 25s linear infinite;
+  animation: slide 26s linear infinite;
 }
 
 .carousel-slide {
@@ -1556,5 +1556,5 @@ article.clients span {
 
 @keyframes slide {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-60%); }
+  100% { transform: translateX(-70%); }
 }
