@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'whymandesigns';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* =======================================================
 *
 * 	Template Style 
@@ -393,7 +400,6 @@ NEEDS CODE CLEAN. THIS IS NOT USED ANYMORE
 #fh5co-footer,
 #fh5co-team,
 #fh5co-work,
-#fh5co-team,
 #fh5co-project,
 #fh5co-counters,
 #fh5co-pricing,
@@ -411,6 +417,7 @@ NEEDS CODE CLEAN. THIS IS NOT USED ANYMORE
   #fh5co-explore,
   #fh5co-project,
   #fh5co-logos,
+  #fh5co-team,
   #fh5co-footer,
   #fh5co-work,
   #fh5co-counters,
@@ -1541,7 +1548,7 @@ article.clients span {
 .carousel-container {
   display: flex;
   width: calc(450px * 8); /* Adjust the width based on the number of images */
-  animation: slide 26s linear infinite;
+  animation: slide 90s linear infinite;
 }
 
 .carousel-slide {
@@ -1556,5 +1563,5 @@ article.clients span {
 
 @keyframes slide {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-70%); }
+  100% { transform: translateX(-140%); }
 }
