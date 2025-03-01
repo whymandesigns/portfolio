@@ -1506,12 +1506,16 @@ article.clients span {
 }
 
 .availability-badge .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #22e24f; /* Green color */
   border-radius: 50%;
   margin-right: 8px;
   animation: flash 2s infinite;
+}
+
+#availability-badge span a{
+color: #22e24f !important;  
 }
 
 @keyframes flash {
@@ -1548,7 +1552,7 @@ article.clients span {
 .carousel-container {
   display: flex;
   width: calc(450px * 8); /* Adjust the width based on the number of images */
-  animation: slide 90s linear infinite;
+  animation: slide 89s linear infinite;
 }
 
 .carousel-slide {
