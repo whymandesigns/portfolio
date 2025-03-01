@@ -20,3 +20,4 @@ Design Portfolio Website
 *	Portfolio: [http://matthewvella.net]
 * LinkedIn: [https://www.linkedin.com/in/matthewvella/]
 *	Dribbble: [https://dribbble.com/whymandesigns]
+*	Substack: [https://substack.com/@whymandesigns]
