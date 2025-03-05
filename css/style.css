@@ -1552,7 +1552,7 @@ color: #22e24f !important;
 .carousel-container {
   display: flex;
   width: calc(450px * 8); /* Adjust the width based on the number of images */
-  animation: slide 89s linear infinite;
+  animation: slide 88s linear infinite;
 }
 
 .carousel-slide {
