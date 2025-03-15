@@ -84,6 +84,20 @@ h1, h2, h3, h4, h5, h6, .foliotitle {
   text-decoration: underline;
 }
 
+.row-spacer-m4 {
+  margin: 4rem 0;
+}
+
+.row-spacer-m8 {
+  margin: 8rem 0;
+}
+
+.no-padding {
+  @media (min-width: 768px) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+}
 /* 
 
 //////////////////////////////////
@@ -818,6 +832,18 @@ NEEDS CODE CLEAN. THIS IS NOT USED ANYMORE
   .section-heading h3 {
     font-size: 20px !important;
     line-height: 32px;
+  }
+}
+
+/* Project heading styles */
+h2.pTitle {
+  padding: 0 15px; /* Default padding for mobile */
+}
+
+/* Remove padding on larger screens */
+@media (min-width: 768px) {
+  h2.pTitle.no-padding {
+      padding: 0 !important;
   }
 }
 
@@ -1568,4 +1594,52 @@ color: #22e24f !important;
 @keyframes slide {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-140%); }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.skill-pill {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.project-grid-link {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.project-grid {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  transition: all 1.2s ease;
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.project-grid:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Remove existing button styles if any */
+.project-grid .desc {
+  display: none;
 }
