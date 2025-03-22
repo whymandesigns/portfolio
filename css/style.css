@@ -1639,7 +1639,68 @@ color: #22e24f !important;
   opacity: 1;
 }
 
+.image-caption {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.7);
+
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 /* Remove existing button styles if any */
 .project-grid .desc {
   display: none;
+}
+
+
+.project-logo {
+  max-width: 120px;
+  margin-bottom: 2rem;
+}
+
+.project-intro {
+  max-width: 65ch;
+  margin: 2rem auto;
+}
+
+.project-hero img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.project-meta .meta-item {
+  margin-bottom: 2rem;
+}
+
+.project-meta h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.content-block {
+  margin-bottom: 4rem;
+}
+
+.content-image {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.divider-line {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  display: block;
+  margin: 4rem auto;
 }
