@@ -1639,6 +1639,7 @@ color: #22e24f !important;
   opacity: 1;
 }
 
+<<<<<<< HEAD
 .image-caption {
   margin-top: 1rem;
   font-size: 1.6rem;
@@ -1703,4 +1704,9 @@ figure {
   width: 100%;
   display: block;
   margin: 4rem auto;
+=======
+/* Remove existing button styles if any */
+.project-grid .desc {
+  display: none;
+>>>>>>> main
 }
