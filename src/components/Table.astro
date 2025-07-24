@@ -1,0 +1,69 @@
+---
+interface Props {
+  headers: string[];
+  rows: Array<Array<string | number>>;
+}
+const { headers, rows } = Astro.props;
+---
+<div class="flexible-table">
+  <table>
+    <thead>
+      <tr>
+        {headers.map(header => <th>{header}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(row => (
+        <tr>
+          {row.map(cell => <td>{cell}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+.flexible-table {
+  margin-left: -39%;
+  margin-right: -39%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #212121 !important;
+}
+.flexible-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875em;
+  border: none;
+}
+.flexible-table th, .flexible-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border: none;
+}
+.flexible-table th {
+  font-weight: 600;
+  color: #ffffff;
+  background: #212121;
+}
+.flexible-table td {
+  color: #adacac;
+  background: #212121;
+}
+.flexible-table tr {
+  background: #212121;
+}
+@media (max-width: 768px) {
+  .flexible-table {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .flexible-table th, .flexible-table td {
+    padding: 0.5rem;
+  }
+}
+</style>
+</style> 

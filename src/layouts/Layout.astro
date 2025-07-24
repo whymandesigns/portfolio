@@ -1,22 +1,317 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Product Designer | Portfolio" />
+		<meta name="keywords" content="Design Systems, Designer, portfolio, experience, resume, user interface, mobile design, user experience, design services, product designer" />
+		<meta name="author" content="Matthew Vella" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Matthew Vella - Product Designer" />
+		<meta property="og:description" content="Product Designer | Portfolio" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://matthewvella.com" />
+		<meta property="og:image" content="/images/og-image.jpg" />
+		
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Matthew Vella - Product Designer" />
+		<meta name="twitter:description" content="Product Designer | Portfolio" />
+		<meta name="twitter:image" content="/images/og-image.jpg" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://matthewvella.com" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<!-- Astro Generator -->
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- Page Title -->
+		<title>{Astro.props.title || "Product Designer | Portfolio"}</title>
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+		
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="/css/animate.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<link rel="stylesheet" href="/css/style.css">
+		
+		<!-- Modernizr JS -->
+		<script src="/js/modernizr-2.6.2.min.js" is:inline></script>
+		
+		<!-- Lottie Animation Library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" is:inline></script>
+		
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="/js/respond.min.js" is:inline></script>
+		<![endif]-->
+		
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-073ESHLC2M" is:inline></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-073ESHLC2M');
+		</script>
+		
+		<!-- Microsoft Clarity -->
+		<script type="text/javascript" is:inline>
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+			})(window, document, "clarity", "script", "qlzlcljoza");
+		</script>
+		
+		<style>
+			/* Ensure MDX pages have the same layout as HTML pages */
+			body {
+				padding: 1em 3em;
+			}
+			
+			/* Content container for narrow text */
+			.content-container {
+				max-width: 56%;
+				margin: 0 auto;
+				position: relative; /* For proper stacking context */
+			}
+			
+			/* Allow images and testimonials to break out of the container */
+			.content-container :global(p img),
+			.content-container :global(> img),
+			.content-container :global(.testimonial) {
+				max-width: calc(178% + 2rem); /* 178% to account for the 56% container width */
+				margin-left: -39%; /* Pull left to center it */
+				margin-right: -39%;
+				position: relative; /* Ensure proper stacking */
+			}
+			
+			/* Keep tables within content width */
+			.content-container :global(table) {
+				width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			
+			/* Keep lists within content width */
+			.content-container :global(ul),
+			.content-container :global(ol) {
+				width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+				padding-left: 1.5rem;
+			}
+			
+			/* Keep blockquotes within content width */
+			.content-container :global(blockquote) {
+				width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			
+			/* Back to home link styling */
+			.content-container :global(a[href="/"]) {
+				display: inline-block;
+				margin-bottom: 2rem;
+				text-decoration: none;
+				font-size: 0.9em;
+			}
+			
+			/* Responsive padding for mobile */
+			@media screen and (max-width: 768px) {
+				body {
+					padding: 3em 1em;
+				}
+				
+				.content-container {
+					max-width: 100%;
+				}
+				
+				.content-container :global(p img),
+				.content-container :global(> img),
+				.content-container :global(.testimonial) {
+					max-width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+				
+				/* Adjust list padding on mobile */
+				.content-container :global(ul),
+				.content-container :global(ol) {
+					padding-left: 1rem;
+				}
+			}
+			
+			/* Ensure MDX content inherits the same styling as HTML pages */
+			:global(body) {
+				font-family: 'Abel', sans-serif;
+				font-weight: 300;
+				font-size: 20px;
+				line-height: 1.5;
+				color: #cccccc;
+				background: #212121;
+				height: 100%;
+				position: relative;
+			}
+			
+			/* Ensure headings in MDX have the same styling */
+			:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6), :global(.foliotitle) {
+				color: #fff;
+				font-family: 'Playfair Display', serif;
+				font-weight: 400;
+				margin: 0 0 30px 0;
+				width: 100%;
+			}
+			
+			/* Ensure paragraphs in MDX have the same styling */
+			:global(p) {
+				margin-bottom: 1.8em;
+				font-size: 20px;
+				width: 100%;
+			}
+			
+			/* Ensure links in MDX have the same styling */
+			:global(a) {
+				color: #ffa500;
+				transition: 0.5s;
+			}
+			
+			:global(a:hover), :global(a:active), :global(a:focus) {
+				color: #cc8400;
+				outline: none;
+				text-decoration: underline;
+			}
+			
+			/* Make all images in MDX fit 100% width */
+			:global(img) {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 2rem auto;
+				border-radius: 8px;
+			}
+			
+			/* Responsive images for mobile */
+			@media screen and (max-width: 768px) {
+				:global(img) {
+					margin: 1.5rem auto;
+					border-radius: 6px;
+				}
+			}
+			
+			/* Style tables in MDX */
+			:global(table) {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 2rem 0;
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			
+			:global(th), :global(td) {
+				padding: 1rem;
+				text-align: left;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			
+			:global(th) {
+				background: rgba(255, 165, 0, 0.1);
+				color: #ffa500;
+				font-weight: 600;
+			}
+			
+			/* Style blockquotes in MDX */
+			:global(blockquote) {
+				border-left: 4px solid #ffa500;
+				padding-left: 1.5rem;
+				margin: 2rem 0;
+				font-style: italic;
+				background: rgba(255, 255, 255, 0.05);
+				padding: 1.5rem;
+				border-radius: 0 8px 8px 0;
+			}
+			
+			/* Style code blocks in MDX */
+			:global(code) {
+				background: rgba(255, 255, 255, 0.1);
+				padding: 0.2rem 0.4rem;
+				border-radius: 4px;
+				font-family: 'Inconsolata', monospace;
+				font-size: 0.9em;
+			}
+			
+			:global(pre) {
+				background: rgba(0, 0, 0, 0.3);
+				padding: 1.5rem;
+				border-radius: 8px;
+				overflow-x: auto;
+				margin: 2rem 0;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				width: 100%;
+			}
+			
+			:global(pre code) {
+				background: none;
+				padding: 0;
+				color: #fff;
+			}
+			
+			/* Style lists in MDX */
+			:global(ul), :global(ol) {
+				margin: 1.5rem 0;
+				padding-left: 2rem;
+				width: 100%;
+			}
+			
+			:global(li) {
+				margin-bottom: 0.5rem;
+			}
+			
+			/* Style horizontal rules in MDX */
+			:global(hr) {
+				border: none;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.2);
+				margin: 3rem 0;
+				width: 100%;
+			}
+		</style>
 	</head>
 	<body>
-		<slot />
+		<div class="content-container">
+			<slot />
+		</div>
+		
+		<!-- JavaScript Files (moved to end of body for better performance) -->
+		<script src="/js/jquery.min.js" is:inline></script>
+		<script src="/js/jquery.easing.1.3.js" is:inline></script>
+		<script src="/js/bootstrap.min.js" is:inline></script>
+		<script src="/js/jquery.waypoints.min.js" is:inline></script>
+		<script src="/js/jquery.stellar.min.js" is:inline></script>
+		<script src="/js/jquery.countTo.js" is:inline></script>
+		<script src="/js/jquery.style.switcher.js" is:inline></script>
+		<script src="/js/imagesloaded.pkgd.min.js" is:inline></script>
+		<script src="/js/charming.min.js" is:inline></script>
+		<script src="/js/TweenMax.min.js" is:inline></script>
+		<script src="/js/demo.js" is:inline></script>
+		<script src="/js/main.js" is:inline></script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
