@@ -1,0 +1,98 @@
+---
+interface Props {
+    quote: string;
+    content: string;
+    name: string;
+    role: string;
+    avatar: string;
+}
+
+const { quote, content, name, role, avatar } = Astro.props;
+---
+
+<div class="testimonial">
+    <p class="quote">{quote}</p>
+    <p class="content">{content}</p>
+    <div class="profile">
+        <img src={avatar} alt={name} class="avatar" />
+        <div class="info">
+            <strong class="name">{name}</strong>
+            <span class="role">{role}</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .testimonial {
+        background-color: #1a1a1a;
+        border-radius: 6px;
+        padding: 6rem 12rem 6rem 12rem;
+        margin: 4rem 0;
+    }
+
+    .quote {
+        font-family: 'Playfair Display', serif;
+        line-height: 48px;
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+
+    .content {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: flex-start; /* Align to the left */
+        margin-left: 0; /* Ensure no left margin */
+    }
+
+    .avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0; /* Remove any margin */
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text to the left */
+        text-align: left;
+    }
+
+    .name {
+        color: #fff;
+        font-size: 1.1em;
+        margin-bottom: 0.25rem;
+    }
+
+    .role {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+        .testimonial {
+            padding: 32px;
+        }
+
+        .quote {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        .content {
+            font-size: 1em;
+        }
+    }
+</style> 

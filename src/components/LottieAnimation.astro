@@ -1,0 +1,73 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  width?: string;
+  height?: string;
+  loop?: boolean;
+  autoplay?: boolean;
+}
+
+const { src, alt = "Animation", width = "100%", height = "auto", loop = true, autoplay = true } = Astro.props;
+---
+
+<div class="lottie-container" data-src={src} data-loop={loop} data-autoplay={autoplay} style={`width: ${width}; height: ${height};`}>
+  <div class="lottie-animation"></div>
+</div>
+
+<style>
+  .lottie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .lottie-animation {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script>
+  import lottie from 'lottie-web';
+
+  // Load lottie-web dynamically
+  const loadLottie = async () => {
+    if (typeof window !== 'undefined') {
+      const { default: lottieModule } = await import('lottie-web');
+      
+      document.querySelectorAll('.lottie-container').forEach(container => {
+        const animationElement = container.querySelector('.lottie-animation');
+        const src = container.getAttribute('data-src');
+        const loop = container.getAttribute('data-loop') === 'true';
+        const autoplay = container.getAttribute('data-autoplay') === 'true';
+        
+        if (animationElement && src) {
+          fetch(src)
+            .then(response => response.json())
+            .then(animationData => {
+              lottieModule.loadAnimation({
+                container: animationElement,
+                renderer: 'svg',
+                loop: loop,
+                autoplay: autoplay,
+                animationData: animationData
+              });
+            })
+            .catch(error => {
+              console.error('Error loading Lottie animation:', error);
+              animationElement.innerHTML = `<p>Error loading animation: ${error.message}</p>`;
+            });
+        }
+      });
+    }
+  };
+
+  // Load when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadLottie);
+  } else {
+    loadLottie();
+  }
+</script> 
