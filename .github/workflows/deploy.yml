@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main  # Deploy when changes are pushed to the main branch
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: p112.lithium.hosting
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # Adjust if your site is in a subfolder
+          server-dir: /var/www/html/  # Replace with your hosting directoryv
+          overwrite: true
+          create-only: true
+          passive: true
+          dangerous-clean-slate: false
