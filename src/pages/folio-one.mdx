@@ -1,0 +1,199 @@
+---
+title: "Building a Scalable System for the World's Top Talent Marketplace"
+description: "Case study: Scaling Toptal's design system for rapid growth and adoption"
+date: "2024-01-15"
+tags: ["design systems", "product design", "leadership", "toptal"]
+layout: ../layouts/Layout.astro
+---
+import Testimonial from '../components/Testimonial.astro';
+import Table from '../components/Table.astro';
+import LottieAnimation from '../components/LottieAnimation.astro';
+
+[← Back to Home](/)
+
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="/images/logos/cl-logo-10.png" alt="Toptal Logo" style="margin: 0 auto;" />
+</div>
+
+<h1 style="text-align: center; line-height: 1.4;">Building a Scalable System for the World's Top Talent Marketplace</h1>
+
+![hero base design system](/images/project-0@2x.png)
+
+<Table
+  headers={["My Responsibilities", "Tools", "Roles", "Project Length"]}
+  rows={[
+    [
+      "Component Architecture",
+      "Figma ~ Figjam",
+      "Design System Lead",
+      "2½ years"
+    ],
+    [
+      "Library Management",
+      "Jira ~Confluence",
+      "Product Manager", 
+      " "
+    ],
+    [
+      "Governance",
+      "Storybook ~ Github",
+      " ",
+      " "
+    ],
+    [
+      "Documentation",
+      "Grafana ~ Token Studio",
+      " ",
+      " "
+    ]
+  ]}
+/>
+
+<br /><br />
+
+
+## Background
+
+As Toptal experienced hypergrowth, it became a business requirement that the product practice had to scale to keep up with evolving company initiatives. The main struggle and challenge was with scaling the system and bringing the much needed adoption and consistency across their three main user-facing portals (Staff, Client, and Talent Portals), multiple internal tools (CMS Tool, TopTeam, TopTaste, TopShop), external tools (Time Tracker, Screenshot app), and numerous new initiatives.
+
+With so many projects running in parallel, a lack of cohesion led to frequent custom designs that carried over into the implementation phase, increasing costs and technical debt, and reducing the ROI for every product-focused team member. Maintaining consistency became an ever-greater challenge as the company’s ecosystem continued to expand. So we needed to systemize a few things.
+
+### Key Achievements
+
+- Increased component adoption rate from a low 18% to 60% across talent portal feature teams within the first six months.
+- Reduced the number of custom components created outside the system by 68%.
+- Implemented adoption metrics on Grafana, tracking component usage by platform, css overrides, and achieved a 100% visibility into system performance.
+- A new product initiative (Hireglobal) was built from scratch in just 2 months, using 92% of components from the design system.
+- Reduced component requests by 20% by enabling designers and developers to contribute directly to the system.
+- Built thorough documentation and covered 45% of core components & patterns, prioritizing those with the highest usage rates and vital user journeys.
+- Went from 30% up to 90% color accessibility compliance across all styles, tokens, and components, ensuring they meet WCAG 2.1 AA standards for contrast and readability.
+
+
+<LottieAnimation src="/animation/systems.json" alt="Systems" width="100%" height="800px" />
+
+## Workshops, User Research & Feedback
+
+During my initial weeks, my focus was on learning and absorbing as much from all the product teams. I wanted to understand how the existing system was being used, identify pain points, and uncover opportunities for improvement. This phase is always crucial to setup a strategy, resource allocations and have an idea on priorities plus it ensures that any changes or enhancements I made were grounded in real-world needs and challenges.
+
+<div style="text-align: center;">
+  <img src="/images/projects/tt/retro@2x.png" alt="Gamified homepage" width="900"/>
+</div>
+
+### Research Goals
+
+- How are designers and engineers currently using the system in their daily workflow?
+- What aspects of the design system are working well, and where are the pain points?
+- How clear, accessible, and easy to navigate is the documentation, particularly when searching for specific information?
+- Are there any gaps or inconsistencies in the system?
+- What specific challenges do teams face during collaboration or when implementing components?
+
+### Action Points
+
+- Stop neglecting use cases in responsive design.
+- Improve the handoff process between design and development.
+- Start creating subsystems for the other platforms that require its own components.
+- Improve the component architecture in Figma with more nested properties.
+- More transparency and communication around what is being built to avoid duplication of work and have an accessible roadmap.
+- Stop relying on outdated or fragmented documentation.
+- Clearer process and more formal process for new requests, bugs etc.
+
+## Establishing a Formal Process
+
+Based on discussions, I focused on addressing the designer insecurity through their design process. To clarify this process, I outlined what steps should be taken when designers work on new initiatives, how to work with the system and what to do if a new component is required. This was captured in this flowchart, which was then shared with the wider team.
+
+![Process Flowchart](/images/projects/tt/Process%20Flowchart@2x.png)
+
+## Structure & Organization
+
+Setting up the right foundations was really important for the project so I began by organizing the Figma libraries, starting with the completion of the migration from Sketch. I recreated the components in Figma and improved the component architecture by applying best practices like variants, props, and auto-layouts and made sure prop names align with storybook react naming conventions.
+
+Next, I moved and gathered all the foundational styles into their own shared library. The long-term goal for this system was to not only serve the product teams but also to support the entire company, including marketing, branding, and creative teams.
+
+The foundations library included:
+
+- Typography
+- Color
+- Spacing
+- Shadows
+- Radii
+- Global Tokens
+
+This global library provided centralized control over all core styles, which proved to be an excellent decision as the projects scaled significantly.
+
+<div style="text-align: center;">
+  <img src="/images/projects/tt/Architecture.png" alt="System Structure" width="900"/>
+</div>
+
+## Token Structure
+
+Design tokens are great and a must to build, scale and maintain design systems, however they have to be done right, kept simple and not over-engineered with layers of abstraction.
+
+We core designers and developers so long at the company that memorized the hex values, so it was always going to be a challenge to introduce a new way of working.
+
+So my proposal was to keep things simple by using the global token (blue-500) and introducing a commonly used abstraction layer—like $bg-blue-500 or $text-blue-500. This approach creates a flexible, widely scoped token that's abstract enough to support consistency while allowing adaptability across the system.
+
+Unnecessary complexity makes tokens harder to maintain and creates a cognitive load for both designers and devlopers, making it hard to choose the correct token.
+
+<div style="text-align: center;">
+  <img src="/images/projects/tt/tokens@2x.png" alt="tokens" width="700"/>
+</div>
+
+## Documentation
+
+At the time, our documentation was only available in a separate Figma files, which created several challenges: it wasn’t widely adopted, wasn’t searchable, and was difficult to maintain. While exploring third-party solutions, budget constraints prevented us from adopting a dedicated tool.
+
+Determined to find a solution, I started using Confluence, which was ‘free’ and accessible company-wide and could embed Figma and Storybook iframes. This provided a centralized space for usage guidelines and best practices, offering an immediate improvement while laying the groundwork to eventually justify investment in our own microsite or a 3rd party tool like zeroheight.
+
+<LottieAnimation src="/animation/base.json" alt="Documentation Animation" width="100%" height="800px" />
+
+## Success Story
+
+In Q1 of 2024, the company announced a major initiative to build a new HRIS and payroll system from scratch, [HireGlobal](//www.toptal.com/hireglobal). This was a critical business project with tight deadlines and high expectations. The dedicated product team worked tirelessly to take the product from concept to release in under two and half months. One of the key successes to the speed of this release was the heavy reliance on the design system.
+
+A staggering 92% of the UI used were system components from BASE Product library. This level of reusability not only streamlined the design and development process but also validated the work we had done to make BASE a reliable and scalable resource for product teams across the company.
+
+![HireGlobal Screenshot](/images/projects/tt/hg@2x.png)
+
+### Figma Components
+
+<div style="text-align: center;">
+  <img src="/images/projects/tt/project1_2.png" alt="tokens" width="900"/>
+</div>
+
+---
+
+<Testimonial 
+    quote="A standout designer and leader, excelling in proactive problem-solving, precise documentation, and team collaboration."
+    content="I had the pleasure of working with Matt, who led the design system at Toptal, and I can't speak highly enough of his contributions. Matt is a fantastic designer and collaborator. His documentation is precise and thorough, which has ensured consistency and clarity across projects.
+
+    He's exceptional at managing the design team's needs while keeping a strong pulse on the business and product evolution. What truly stands out about Matt is his proactive nature. He consistently delivers above expectations, pushing for solutions beyond the brief. His ability to anticipate and address challenges before they arise sets him apart as a leader. Beyond his technical skills, Matt is simply a great person to work with. He is approachable and dependable and uplifts the team around him."
+    name="Alek Djuric"
+    role="Director of Product Design"
+    avatar="/images/avatars/ale_dju.jpeg"
+/>
+
+<Testimonial 
+    quote="A truly talented and humble designer who transformed our design system."
+    content="I had the pleasure of working with Matt on the Picasso Design System, where I served as an engineering manager, and Matt led the design efforts. Collaborating with Matt was an exceptional experience; he is not only a talented and experienced designer but also a humble and approachable team player.
+    
+    Before Matt joined our team, we faced recurring issues with inconsistencies across our products due to misalignment on design standards. However, once Matt took charge, he effectively documented the design system and ensured product designers adhered to it. As a result, our inconsistencies diminished, and for the past year, I haven't encountered any issues.
+    
+    Matt was a fantastic partner to the engineering team. He consistently considered our perspective, adapting designs to follow UI best practices while making them easier to implement. He was always available to answer questions, offering full support to my engineers.
+    
+    I would gladly work with Matt again and highly recommend him for any design leadership role.
+    "
+    name="Oleksandr Nechai"
+    role="Engineering Manager"
+    avatar="/images/avatars/ole_nec.jpeg"
+/>
+
+<Testimonial 
+    quote="Matthew is a skilled designer with strong Design Systems expertise, excellent collaboration skills, and a keen eye for detail. Highly recommended for his ability to balance UX and technical needs effectively."
+    content="Matthew is a highly experienced designer with a solid understanding of Design Systems and exceptional Figma skills. His attention to detail and ability to self-organize made collaborating with him on the implementation of the design system with the engineering team a very positive experience.
+    
+    He was able to work effectively with both business stakeholders and software engineers, balancing user experience needs with technical feasibility. In doing so, he successfully laid the foundation for an excellent and efficient Design System. I highly recommend Matthew to any company due to his strong soft skills and proven expertise.
+    "
+    name="Diogo Saito Takeuchi"
+    role="Technical Product Manager"
+    avatar="/images/avatars/dio_sai.jpeg"
+/>
