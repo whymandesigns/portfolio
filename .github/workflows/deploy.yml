@@ -1,3 +1,5 @@
+name: Deploy v1.matthewvella.net
+
 on:
   push:
     branches:
@@ -17,7 +19,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Adjust if your site is in a subfolder
-          server-dir: /var/www/html/  # Replace with your hosting directoryv
+          server-dir: /var/www/v1.matthewvella.net  # Replace with your hosting directoryv
           overwrite: true
           create-only: true
           passive: true
