@@ -20,7 +20,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Adjust if your site is in a subfolder
           server-dir: /var/www/v1.matthewvella.net  # Replace with your hosting directoryv
-          overwrite: true
-          create-only: true
-          passive: true
           dangerous-clean-slate: false
