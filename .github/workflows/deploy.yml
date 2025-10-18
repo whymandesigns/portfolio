@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Adjust if your site is in a subfolder
-          server-dir: /var/www/v1.matthewvella.net  # Replace with your hosting directoryv
+          server-dir: /var/www/v1.matthewvella.net/  # Replace with your hosting directoryv
           dangerous-clean-slate: false
